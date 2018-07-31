@@ -2,7 +2,7 @@
 
 An implementaion of tic-tac-toe built using React as part of the [learn-by-doing tutorial](https://reactjs.org/tutorial/tutorial.html) in the React docs.
 
-![](./assets/demo.gif)
+![Demo](https://github.com/russomp/tic-tac-toe/blob/master/demo.gif)
 
 ### The core functionality:
 - Lets you play tic-tac-toe,
@@ -12,7 +12,7 @@ An implementaion of tic-tac-toe built using React as part of the [learn-by-doing
 
 
 ### Extending the core functionality:
-- [] Displays the location for each move in the format (col, row) in the move history list.
+- [ ] Displays the location for each move in the format (col, row) in the move history list.
 - [x] Bold the currently selected item in the move list
 - [x] Rewrite Board to use two loops to make the squares instead of hardcoding them
 - [x] Add a toggle button that lets you sort the moves in either ascending or descending order
