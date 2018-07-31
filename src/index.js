@@ -75,6 +75,7 @@ class Game extends React.Component {
       }),
       stepNumber: boardHistory.length,
       xIsNext: !this.state.xIsNext,
+      sortAsc: false,
     });
   }
 
@@ -83,6 +84,13 @@ class Game extends React.Component {
       stepNumber: step,
       xIsNext: (step % 2) === 0,
     });
+  }
+
+  handleSort(evt) {
+    this.setState({
+      sortAsc: evt.target.checked,
+    });
+    
   }
 
   render() {
@@ -104,6 +112,11 @@ class Game extends React.Component {
         </li>
       )
     });
+
+    if (this.state.sortAsc) {
+      moves.reverse();
+    }
+    
     
     let status;
     if (winner) {
@@ -126,6 +139,12 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
+          <div>
+            <label>
+              <input type="checkbox" onChange={(evt) => this.handleSort(evt)}/>
+              Sort Ascending
+            </label>
+          </div>
           <ol>{moves}</ol>
         </div>
       </div>
